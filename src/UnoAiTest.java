@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 /**
  * Test class for AI player implementation
  * @author Ajan Balaganesh Danilo Bukvic Aydan Eng Aws Ali
- * @version 3.0
+ * @version 4.0
  */
 public class UnoAiTest {
 

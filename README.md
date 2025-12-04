@@ -1,4 +1,4 @@
-# Uno Game For SYSC 3110 Project Milestone 4
+# Uno Game For SYSC 3110 Project Milestone 5 (Bonus)
 
 ### Team
 
@@ -37,7 +37,7 @@ Uno Flip Game created for the class project for the Carleton University SYSC3110
 * Aydan Eng
 * Aws Ali
 
-### Individual Breakdown
+### Individual Breakdown (Core Project)
 
 * **Ajan Balaganesh:**
     * Contributed to the core `UnoModel` logic, specifically managing turn progression and state updates.
@@ -60,6 +60,11 @@ Uno Flip Game created for the class project for the Carleton University SYSC3110
     * Wrote `UnoControllerTest` and `UnoModelTest` to ensure robust error handling.
 
 ## Deliverables and Roadmap
+
+### DONE: Milestone 5 (Bonus- Version 5.0)
+- **Feature 1 - Images:** Added background images and button icons.
+- Visual update for flipping between Light vs. Dark mode.
+- UI scaling and font improvements.
 
 ### DONE: Milestone 4 (Version 4.0)
 - Replay Functionality (Rounds & Scoring logic)
@@ -90,6 +95,21 @@ Uno Flip Game created for the class project for the Carleton University SYSC3110
 - Documentation (UML Diagram, detailed description of design decisions, user manuals, javadoc documentation)
 
 ## Changelog
+
+### Milestone 5 (Bonus Feature)
+
+#### Feature Selected: Feature 1 - Images
+**Gameplay Explanation:**
+The game now features dynamic background images that change depending on whether the game is in "Light" or "Dark" mode. This enhances the visual feedback for the Uno Flip mechanic, making it immediately obvious which side is active. Additionally, the "Draw" and "Next Player" buttons now include graphical icons for better UI clarity.
+
+**Implementation Details:**
+* **`UnoFrame.java`:** Modified to include a custom inner class `BackgroundPanel` that overrides `paintComponent` to render the background image.
+* **Transparency:** Implemented transparency (`setOpaque(false)`) on child panels (Hand, Stats, Buttons) so the background remains visible.
+* **Resources:** Added an `images/` directory containing `bg_light.jpg`, `bg_dark.jpg`, `draw_btn.png`, and `next_btn.png`.
+* **Dynamic UI:** Text colors now automatically toggle between Black (Light Mode) and White (Dark Mode) to ensure readability against the backgrounds. Buttons were resized to `50x50` to accommodate the new icons.
+
+**Contributors for Milestone 5:**
+* Danilo Bukvic, Ajan Balaganesh, Aydan Eng and Aws Ali- Implemented image loading, background panel logic, and UI asset integration.
 
 ### Milestone 4 (Version 4.0)
 
@@ -155,26 +175,4 @@ Uno Flip Rules and Scoring: https://www.unorules.com/uno-flip-rules/
 - Refactored game to use MVC (Model - View - Controller) implementation
 - Updated readme to reflect new changes and documentation
 
-### Milestone 1 (Version 1.0)
-
-#### Added
-- Core implementation of UNO Game allowing players to:
-    - View their drawn cards
-    - Place cards using the official notation as detail in the wikipedia link: https://en.wikipedia.org/wiki/Uno_Flip
-    - Draw one card
-    - Execute actions associated with special cards, including Reverse, Skip, Wild, and Wild Draw Two cards
-    - Observe the resultant state of the cards, presented in text format
-- UML Diagram of UNO Game
-- Sequence Diagram of UNO Game
-- Unit Test for various classes (Card, ConsoleView, Deck, Player, RulesEngine, ScoreBoard)
-
-## Known Issues
-- No known issues at this time.
-
-## How To Run
-1. **From Source:** Run `Main.java` in your IDE. This will start a playable UNO Game.
-2. **From Executable JAR:**
-    - Locate the `Uno-M4.jar` file (typically found in the `out/artifacts` folder or provided release).
-    - Open a terminal or command prompt.
-    - Navigate to the directory containing the JAR file.
-    - Run the command: `java -jar Uno-M4.jar`
+###
